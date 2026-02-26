@@ -1,6 +1,6 @@
-package ro.ase.cts.zoo;
+package ro.ase.cts.clase.zoo;
 
-import ro.ase.cts.animale.Animal;
+import ro.ase.cts.clase.animale.Animal;
 
 import java.util.ArrayList;
 import java.util.List;

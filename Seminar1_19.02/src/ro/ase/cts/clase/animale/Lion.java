@@ -1,4 +1,4 @@
-package ro.ase.cts.animale;
+package ro.ase.cts.clase.animale;
 
 public class Lion extends Animal{
     private float greutate;

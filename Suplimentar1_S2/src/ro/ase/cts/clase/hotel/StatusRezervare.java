@@ -1,7 +1,0 @@
-package ro.ase.cts.clase.hotel;
-
-public enum StatusRezervare {
-    Creata,
-    Confirmata,
-    Anulata
-}

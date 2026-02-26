@@ -1,5 +1,0 @@
-package ro.ase.cts.clase.hotel;
-
-public interface Reducere {
-    double aplicaReducere(double total);
-}

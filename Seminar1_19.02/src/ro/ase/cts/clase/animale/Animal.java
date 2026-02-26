@@ -1,4 +1,4 @@
-package ro.ase.cts.animale;
+package ro.ase.cts.clase.animale;
 
 //o clasa abstracta - nu se instantiaza direct (nu pot face new Animal())
 public abstract class Animal{

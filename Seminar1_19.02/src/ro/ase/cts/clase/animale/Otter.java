@@ -1,4 +1,4 @@
-package ro.ase.cts.animale;
+package ro.ase.cts.clase.animale;
 
 public class Otter extends Animal{
     private String tipMediu;
