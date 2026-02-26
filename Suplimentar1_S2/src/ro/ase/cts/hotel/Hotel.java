@@ -1,4 +1,4 @@
-package ro.ase.cts.clase.hotel;
+package ro.ase.cts.hotel;
 
 import java.util.ArrayList;
 import java.util.List;

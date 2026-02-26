@@ -1,4 +1,4 @@
-package ro.ase.cts.clase.hotel;
+package ro.ase.cts.hotel;
 
 public enum StatusRezervare {
     Creata,

@@ -1,4 +1,4 @@
-package ro.ase.cts.clase.hotel;
+package ro.ase.cts.hotel;
 
 //cl. abstracta = oblig clasele copil sa impl aceleasi metode, nu poate fi instantiata, e ca o categorie generala pe care o particularizez
 public abstract  class ServiciuHotel {

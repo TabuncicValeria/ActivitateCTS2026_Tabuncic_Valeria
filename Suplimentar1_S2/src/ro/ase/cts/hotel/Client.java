@@ -1,4 +1,4 @@
-package ro.ase.cts.clase.hotel;
+package ro.ase.cts.hotel;
 
 public class Client {
     private final String id;// setam id-ul ca fiind final pt a nu putea fi modificat

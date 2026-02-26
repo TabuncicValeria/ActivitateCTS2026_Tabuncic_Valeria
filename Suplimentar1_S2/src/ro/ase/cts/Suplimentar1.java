@@ -1,6 +1,5 @@
-package ro.ase.cts.clase;
+package ro.ase.cts;
 
-import ro.ase.cts.clase.hotel.*;
 import ro.ase.cts.hotel.*;
 
 public class Suplimentar1 {
