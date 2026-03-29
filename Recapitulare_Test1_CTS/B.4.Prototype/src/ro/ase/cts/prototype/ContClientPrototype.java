@@ -1,0 +1,7 @@
+package ro.ase.cts.prototype;
+/*B.4.	Restaurantul dorește să implementeze un modul în cadrul aplicației, astfel încât dacă un client a mai fost
+la restaurant și revine pentru a realiza o rezervare să nu fie necesară reconstruirea unui cont respectivului client,
+deoarece construirea unui nou obiect durează foarte mult si solicita mai multe date. */
+public interface ContClientPrototype {
+    ContClient copiaza();
+}

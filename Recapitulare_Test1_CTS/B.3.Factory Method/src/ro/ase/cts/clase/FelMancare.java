@@ -1,0 +1,9 @@
+package ro.ase.cts.clase;
+
+/*B.3.Restaurantul servește mai multe tipuri de supe: supă de legume, supă de ciuperci, supă de vită, etc.
+ Si mai multe tipuri de desert: Papanasi, Clatite, CheeseCake, etc Să se implementeze modulul care permite
+ realizarea de obiecte din familia Felurilor de mancare impartite pe categorii: Supe si Desert. */
+
+public interface FelMancare {
+    void afisareDescriere();
+}
