@@ -1,0 +1,65 @@
+5. Platformă de editare foto
+Pattern vizat: Prototype
+Se dezvoltă o aplicație pentru editare foto profesională. În aplicație există presetări vizuale complexe care se încarcă greu și sunt folosite frecvent de utilizatori.
+Pentru a evita recrearea lor de fiecare dată, trebuie implementată o soluție de copiere eficientă.
+Interfață primită:
+public interface IPhotoPreset  {
+    IPhotoPreset copiaza();
+    void aplicaPreset();
+}
+Clasă auxiliară primită:
+public class ExportSettings {
+    private String format;
+    private int quality;
+
+    public ExportSettings(String format, int quality) {
+        this.format = format;
+        this.quality = quality;
+    }
+
+    public ExportSettings(ExportSettings other) {
+        this.format = other.format;
+        this.quality = other.quality;
+    }
+
+    @Override
+    public String toString() {
+        return "ExportSettings{" +
+                "format='" + format + '\'' +
+                ", quality=" + quality +
+                '}';
+    }
+}
+Clasă abstractă primită:
+import java.util.List;
+
+public abstract class AbstractPhotoPreset implements IPhotoPreset {
+    protected String numePreset;
+    protected List<String> filtreAplicate;
+    protected ExportSettings exportSettings;
+    protected double intensitate;
+
+    public AbstractPhotoPreset(String numePreset, List<String> filtreAplicate,
+                               ExportSettings exportSettings, double intensitate) {
+        this.numePreset = numePreset;
+        this.filtreAplicate = filtreAplicate;
+        this.exportSettings = exportSettings;
+        this.intensitate = intensitate;
+    }
+}
+Cerințe:
+Se cere implementarea a cel puțin 3 tipuri de presetări:
+•	PortraitPreset
+•	VintagePreset
+•	CinematicPreset
+Fiecare presetare trebuie să poată fi copiată eficient printr-o metodă de tip prototype.
+Condiții importante:
+•	copierea trebuie să fie deep copy pentru:
+o	lista de filtre;
+o	obiectul ExportSettings;
+•	modificarea unei copii nu trebuie să afecteze originalul;
+•	aplicaPreset() va afișa numele presetului și filtrele folosite.
+1p testare:
+•	creează cel puțin 3 prototipuri;
+•	realizează cel puțin 4 copii;
+•	modifică o copie și demonstrează că originalul nu se schimbă.

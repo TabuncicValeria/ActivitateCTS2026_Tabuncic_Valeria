@@ -1,0 +1,40 @@
+Platformă de monitorizare servere
+Pattern vizat: Singleton
+
+Se dezvoltă o aplicație pentru monitorizarea serverelor unei companii. Sistemul trebuie să dețină o singură componentă
+centrală care înregistrează toate alertele generate de servere.
+
+Această componentă trebuie să fie unică în aplicație și să implementeze interfața IAlertManager.
+
+Interfață primită:
+public interface IAlertManager {
+    void adaugaAlerta(String serverId, String mesaj, int severitate);
+    void afiseazaUltimeleAlerte();
+    int getNumarAlerteCritice();
+}
+Cerințe:
+
+Componenta concretă va gestiona:
+
+numele centrului de monitorizare;
+o listă de alerte;
+o alertă este critică dacă are severitate >= 8.
+
+Fiecare alertă va conține:
+
+serverId
+mesaj
+severitate
+
+Nu este permisă existența mai multor instanțe ale managerului de alerte.
+
+Condiții suplimentare:
+la afiseazaUltimeleAlerte() se vor afișa doar ultimele 5 alerte, dacă există;
+dacă se încearcă adăugarea unei alerte cu mesaj gol, aceasta nu se salvează;
+componenta trebuie să fie obținută printr-o metodă statică.
+
+testare:
+obține cel puțin două referințe la manager;
+dovedește că sunt aceeași instanță;
+adaugă cel puțin 6 alerte;
+afișează ultimele 5 și numărul alertelor critice.

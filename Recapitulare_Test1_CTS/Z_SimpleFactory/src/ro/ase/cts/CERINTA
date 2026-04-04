@@ -1,0 +1,48 @@
+Aplicație de streaming muzical
+Pattern vizat: Simple Factory
+Se dezvoltă o aplicație de streaming care oferă utilizatorilor diverse tipuri de abonamente digitale.
+Sistemul trebuie să permită crearea următoarelor tipuri de abonamente:
+•	Free
+•	Premium
+•	Family
+•	Student
+Crearea abonamentelor trebuie separată de logica principală a aplicației.
+Interfață primită:
+public interface ISubscription {
+    void activeaza();
+    String getDescriere();
+    double calculeazaPretLunar();
+    boolean permiteDownloadOffline();
+}
+Clasă abstractă primită:
+public abstract class AbstractSubscription implements ISubscription {
+    protected String numePlan;
+    protected int numarDispozitive;
+    protected double pretBaza;
+
+    public AbstractSubscription(String numePlan, int numarDispozitive, double pretBaza) {
+        this.numePlan = numePlan;
+        this.numarDispozitive = numarDispozitive;
+        this.pretBaza = pretBaza;
+    }
+
+    @Override
+    public String getDescriere() {
+        return "Plan: " + numePlan + ", dispozitive: " + numarDispozitive + ", pret baza: " + pretBaza;
+    }
+}
+Cerințe:
+Fiecare tip de abonament va avea o regulă proprie:
+•	Free: preț 0, fără download offline;
+•	Premium: prețul de bază integral, cu download offline;
+•	Family: prețul de bază + 20%, minim 3 dispozitive;
+•	Student: prețul de bază cu reducere 50%, cu download offline.
+Trebuie implementată o fabrică care creează obiectele concrete pe baza unui tip primit ca parametru.
+Condiții suplimentare:
+•	dacă tipul nu este recunoscut, se aruncă excepție;
+•	în activeaza() se va afișa un mesaj specific fiecărui tip;
+•	nu este permisă instanțierea directă a claselor concrete în main.
+testare:
+•	creează cel puțin 4 abonamente folosind fabrica;
+•	apelează metodele specifice;
+•	demonstrează comportamentul diferit pentru calculeazaPretLunar() și permiteDownloadOffline().

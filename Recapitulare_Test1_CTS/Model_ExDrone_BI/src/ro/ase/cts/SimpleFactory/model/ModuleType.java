@@ -1,0 +1,5 @@
+package ro.ase.cts.SimpleFactory.model;
+
+public enum ModuleType {
+    NIGHT_VISION,GPS_TRACKING,HIGH_RESOLUTION_CAMERA,URMARIRE_INTELIGENTA,BATERIE_SUPLIMENTARA
+}

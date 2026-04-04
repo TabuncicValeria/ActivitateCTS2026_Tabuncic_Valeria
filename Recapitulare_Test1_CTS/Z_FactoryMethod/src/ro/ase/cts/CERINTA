@@ -1,0 +1,47 @@
+3. Platformă de training corporate
+Pattern vizat: Factory Method
+Se dezvoltă o aplicație pentru gestionarea cursurilor oferite angajaților unei companii. Platforma oferă două categorii mari de cursuri:
+•	cursuri tehnice;
+•	cursuri de business.
+Fiecare categorie are propriile tipuri de cursuri.
+Interfață primită:
+public interface ICourse {
+    void desfasoaraCurs();
+    String getTitlu();
+    double getCostFinal();
+}
+Clasă abstractă primită:
+public abstract class AbstractCourse implements ICourse {
+    protected String titlu;
+    protected int durataOre;
+    protected double costBaza;
+
+    public AbstractCourse(String titlu, int durataOre, double costBaza) {
+        this.titlu = titlu;
+        this.durataOre = durataOre;
+        this.costBaza = costBaza;
+    }
+
+    @Override
+    public String getTitlu() {
+        return titlu;
+    }
+}
+Cerințe:
+Trebuie implementat sistemul astfel încât:
+•	pentru cursurile tehnice să existe o fabrică proprie;
+•	pentru cursurile business să existe o fabrică proprie;
+•	logica principală să lucreze doar cu fabricile și cu tipurile abstracte.
+Reguli de business:
+•	cursurile tehnice au un cost final = costBaza + durataOre * 15;
+•	cursurile business au un cost final = costBaza + durataOre * 10;
+•	fiecare curs afișează un mesaj diferit în desfasoaraCurs().
+Restricții:
+•	nu este permis un switch direct în main;
+•	logica de creare trebuie să fie în fabrici;
+•	nu este permisă folosirea unei singure fabrici pentru toate cursurile.
+1p testare:
+•	creează și folosește cel puțin 4 cursuri;
+•	utilizează ambele fabrici;
+•	afișează titlul și costul final pentru fiecare curs.
+________________________________________
