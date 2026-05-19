@@ -13,16 +13,16 @@ public abstract class OptiuneMeniu {
     public abstract void afiseaza(String indentare);
     public void adaugaOptiune(OptiuneMeniu optiuneMeniu)
     {
-        throw new UnsupportedOperationException("Operatoa nu e permisa pt acest tip de nod!");
+        throw new UnsupportedOperationException("Operatia nu e permisa pt acest tip de nod!");
     }
 
     public void stergeOptiune(OptiuneMeniu optiuneMeniu)
     {
-        throw new UnsupportedOperationException("Operatoa nu e permisa pt acest tip de nod!");
+        throw new UnsupportedOperationException("Operatia nu e permisa pt acest tip de nod!");
     }
 
     public OptiuneMeniu getOptiuneMeniu(int index)
     {
-        throw new UnsupportedOperationException("Operatoa nu e permisa pt acest tip de nod!");
+        throw new UnsupportedOperationException("Operatia nu e permisa pt acest tip de nod!");
     }
 }
