@@ -1,0 +1,6 @@
+În cadrul spitalului, pacienții care ajung la camera de gardă trebuie direcționați către secția potrivită
+în funcție de gravitatea simptomelor. Dacă pacientul are simptome ușoare, acesta este direcționat către
+ Medicul de Familie. Dacă simptomele sunt moderate, pacientul este trimis către Secția de Investigații.
+ Dacă simptomele sunt grave, pacientul este trimis direct la Terapie Intensivă. În cazul în care pacientul
+ nu poate fi preluat de o secție, acesta este redirecționat către un alt spital. Să se implementeze modulul
+ care permite direcționarea pacienților folosind un lanț de responsabilități.
