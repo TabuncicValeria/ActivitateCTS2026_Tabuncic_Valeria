@@ -1,8 +1,8 @@
 package ro.ase.cts.clase;
 
 public class ValidatorTerestru implements IValidatorTransport{
-    public float pret;
-    public float durata;
+    private float pret;
+    private float durata;
 
     public ValidatorTerestru(float pret, float durata) {
         this.pret = pret;

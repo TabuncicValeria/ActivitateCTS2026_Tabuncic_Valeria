@@ -1,8 +1,8 @@
 package ro.ase.cts.clase;
 
 public class ValidatorMetrou {
-    public float pret;
-    public float durata;
+    private float pret;
+    private float durata;
 
     public ValidatorMetrou(float pret, float durata) {
         this.pret = pret;
